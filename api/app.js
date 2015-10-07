@@ -9,7 +9,7 @@ var app = express();
 app.get('/api/people/:id', getPersonById);
 app.get('/api/people', getAllPeople);
 
-var HTTP_PORT = 8080;
+var HTTP_PORT = 8090;
 app.listen(HTTP_PORT, function(err) {
     if (err) {
         throw err;
