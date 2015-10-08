@@ -10,3 +10,11 @@ addressBook.config([
     });
   }
 ]);
+
+addressBook.factory('apiService', ['$http', function ($http) {
+    return {
+        getPeople: function () {
+            return $http.get('/api/people');
+        }
+    };
+}]);
