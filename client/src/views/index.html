@@ -1,1 +1,26 @@
-<h1 ng-bind="message"></h1>
+<header>
+    <nav class="top-nav teal">
+        <div class="container">
+            <div class="nav-wrapper">
+                <span class="page-title">Address Book!</span>
+            </div>
+        </div>
+    </nav>
+    <ul class="side-nav fixed">
+        <li class="logo grey lighten-3">
+            <div class="logo-container">
+                <i class="material-icons large">perm_identity</i>
+            </div>
+        </li>
+        <li class="bold contact" ng-repeat="person in people" ng-click="select(person)">
+            <div ng-class="{ active: person === selectedPerson }">
+                {{ person.name }}
+            </div>
+        </li>
+    </ul>
+</header>
+<main>
+    <div class="container">
+        {{ selectedPerson.name }}
+    </div>
+</main>

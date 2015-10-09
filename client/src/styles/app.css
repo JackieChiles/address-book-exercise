@@ -1,0 +1,18 @@
+.page-title {
+    font-size: 3em;
+}
+
+li.logo .logo-container {
+    text-align: center;
+    padding: 15px 0;
+}
+
+ul.side-nav li.logo:hover {
+    background-color: inherit;
+    cursor: default;
+}
+
+ul.side-nav li.contact {
+    padding: 15px;
+    cursor: pointer;
+}
