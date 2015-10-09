@@ -3,6 +3,7 @@
         {
             "id": 1,
             "name": "Adam Wright",
+            "picture": "http://i.imgur.com/7USofOa.png",
             "title": "Software Developer",
             "phone": "919-555-5555",
             "email": "adam.wright@mycompany.com",
@@ -37,6 +38,7 @@
         {
             "id": 2,
             "name": "Joe Manfrey",
+            "picture": "http://i.imgur.com/nHKFPul.png",
             "title": "Software Developer",
             "phone": "919-666-6666",
             "email": "joe.manfrey@mycompany.com",
@@ -59,6 +61,7 @@
         {
             "id": 3,
             "name": "Douglas Cho",
+            "picture": "http://i.imgur.com/gNtFLKe.png",
             "title": "Software Developer",
             "phone": "919-777-7777",
             "email": "douglas.cho@mycompany.com",
@@ -81,6 +84,7 @@
         {
             "id": 4,
             "name": "Allison Murray",
+            "picture": "http://i.imgur.com/1OFPzyB.png",
             "title": "Software Developer",
             "phone": "919-888-8888",
             "email": "allison.murray@mycompany.com",

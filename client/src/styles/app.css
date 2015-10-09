@@ -42,3 +42,11 @@ ul.side-nav li.contact, div.multi-select-container {
 .contact-sub-item {
     padding-bottom: 10px;
 }
+
+.big-pic {
+    width: 100px;
+}
+
+.small-pic {
+    width: 25px;
+}
