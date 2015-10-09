@@ -7,12 +7,38 @@ li.logo .logo-container {
     padding: 15px 0;
 }
 
-ul.side-nav li.logo:hover {
+ul.side-nav li.logo:hover, ul.side-nav li.sort:hover  {
     background-color: inherit;
     cursor: default;
 }
 
-ul.side-nav li.contact {
+ul.side-nav li.sort {
+    padding: 0;
+}
+
+div.multi-select-container {
+    margin: 0 0 15px 0;
+}
+
+ul.side-nav li.sort a.btn {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: left;
+}
+
+ul.side-nav li.sort a.btn i.material-icons {
+    font-size: 2rem;
+}
+
+ul.side-nav li.sort a.btn span {
+    vertical-align: top;
+}
+
+ul.side-nav li.contact, div.multi-select-container {
     padding: 15px;
     cursor: pointer;
+}
+
+.contact-sub-item {
+    padding-bottom: 10px;
 }

@@ -9,11 +9,23 @@
     <ul class="side-nav fixed">
         <li class="logo grey lighten-3">
             <div class="logo-container">
-                <i class="material-icons large">perm_identity</i>
+                <i class="material-icons large">person</i>
             </div>
         </li>
-        <li class="bold contact" ng-repeat="person in people" ng-click="select(person)">
-            <div ng-class="{ active: person === selectedPerson }">
+        <li class="sort">
+            <a class="btn" ng-click="toggleSort()">
+                <i class="material-icons small">{{ sort.icon }}</i>
+                <span>{{ sort.label }}</span>
+            </a>
+        </li>
+        <li>
+            <div class="input-field multi-select-container">
+                <input type="checkbox" ng-model="allowMultiSelect" id="allow-multi-select" />
+                <label for="allow-multi-select">Allow multiple selection?</label>
+            </div>
+        </li>
+        <li class="bold contact" ng-repeat="person in people | orderBy: sort.orderBy" ng-click="toggle(person)">
+            <div ng-class="{ 'teal-text': person.selected }">
                 {{ person.name }}
             </div>
         </li>
@@ -21,6 +33,50 @@
 </header>
 <main>
     <div class="container">
-        {{ selectedPerson.name }}
+        <div class="row">
+            <div class="col s12" ng-repeat="selectedPerson in people | filter: { selected: true }">
+                <div class="card teal lighten-3">
+                    <div class="card-content">
+                        <div class="card-title">{{ selectedPerson.name }}</div>
+                        <div class="row">
+                            <div class="col s4">
+                                <div>
+                                    <i class="material-icons">work</i>
+                                    {{ selectedPerson.title }}
+                                </div>
+                                <div>
+                                    <i class="material-icons">phone</i>
+                                    {{ selectedPerson.phone }}
+                                </div>
+                                <div>
+                                    <i class="material-icons">email</i>
+                                    {{ selectedPerson.email }}
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <h5><i class="material-icons">school</i>&nbsp;Education</h5>
+                                <div ng-repeat="degree in selectedPerson.education" class="contact-sub-item">
+                                    <div>
+                                        <strong>{{ degree.institution }}</strong>
+                                    </div>
+                                    <div>{{ degree.startYear }} - {{ degree.endYear || 'Present' }}</div>
+                                    <div>{{ degree.degree }}</div>
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <h5><i class="material-icons">work</i>&nbsp;Experience</h5>
+                                <div ng-repeat="degree in selectedPerson.workExperience" class="contact-sub-item">
+                                    <div>
+                                        <strong>{{ degree.institution }}</strong>
+                                    </div>
+                                    <div>{{ degree.startYear }} - {{ degree.endYear || 'Present' }}</div>
+                                    <div>{{ degree.title }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
