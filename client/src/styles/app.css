@@ -7,7 +7,7 @@ li.logo .logo-container {
     padding: 15px 0;
 }
 
-ul.side-nav li.logo:hover, ul.side-nav li.sort:hover  {
+ul.side-nav li.logo:hover, ul.side-nav li.sort:hover, ul.side-nav li.options:hover  {
     background-color: inherit;
     cursor: default;
 }
@@ -34,9 +34,12 @@ ul.side-nav li.sort a.btn span {
     vertical-align: top;
 }
 
+ul.side-nav li.contact {
+    cursor: pointer;
+}
+
 ul.side-nav li.contact, div.multi-select-container {
     padding: 15px;
-    cursor: pointer;
 }
 
 .contact-sub-item {
