@@ -49,11 +49,11 @@
                                 </div>
                                 <div>
                                     <i class="material-icons">phone</i>
-                                    {{ selectedPerson.phone }}
+                                    <a href="tel:{{ selectedPerson.phone }}">{{ selectedPerson.phone }}</a>
                                 </div>
                                 <div>
                                     <i class="material-icons">email</i>
-                                    {{ selectedPerson.email }}
+                                    <a href="mailto:{{ selectedPerson.email }}">{{ selectedPerson.email }}</a>
                                 </div>
                             </div>
                             <div class="col s4">
