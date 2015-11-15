@@ -7,6 +7,14 @@ li.logo .logo-container {
     padding: 15px 0;
 }
 
+div.nav-wrapper {
+    text-align: center;
+}
+
+ul.side-nav.fixed {
+    left: auto;
+}
+
 ul.side-nav li.logo:hover, ul.side-nav li.sort:hover, ul.side-nav li.options:hover  {
     background-color: inherit;
     cursor: default;
